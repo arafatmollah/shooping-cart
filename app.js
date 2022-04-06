@@ -27,4 +27,17 @@ document.getElementById('case-increased').addEventListener('click', function () 
     caseValueIncrease.value = caseValueText;
 
     //balance
+    const casePrice = document.getElementById('case-price');
+    casePrice.innerText = 59 * caseValueText;
+})
+
+document.getElementById('case-decreased').addEventListener('click', function () {
+    const caseDecreased = document.getElementById('case-value');
+    let caseValue = caseDecreased.value;
+    caseValue = parseInt(caseValue) - 1;
+    caseDecreased.value = caseValue;
+
+    //balance
+    const price = document.getElementById('case-price');
+    price.innerText = 59 * caseValue;
 })
