@@ -1,24 +1,30 @@
 document.getElementById('phone-increase').addEventListener('click', function () {
-    const phonePrice = document.getElementById('phone-price');
-    const phonePriceText = phonePrice.innerText;
-    const phonePriceTextValue = parseInt(phonePriceText);
-    
     const phonePriceValue = document.getElementById('price-value');
     let priceValue = phonePriceValue.value;
     priceValue = parseInt(priceValue) + 1; 
     phonePriceValue.value = priceValue;
 
     //balance
-    phonePrice.innerText = phonePriceTextValue * parseInt(priceValue);
+    const phonePrice = document.getElementById('phone-price');
+    phonePrice.innerText = 1219 * parseInt(priceValue);
     // phonePrice.innerText = priceValue
 })
 document.getElementById('phone-decrease').addEventListener('click', function () {
     const priceDecreased = document.getElementById('price-value');
-    const priceDecreasedValue = priceDecreased.value;
-    priceDecreased.value = parseInt(priceDecreasedValue) - 1;
+    let priceDecreasedValue = priceDecreased.value;
+    priceDecreasedValue = parseInt(priceDecreasedValue) - 1;
+    priceDecreased.value = priceDecreasedValue;
     
-    // const pricePhone = document.getElementById('phone-price');
-    // const priceText = pricePhone.innerText;
-    // const priceNumber = parseInt(priceText);
-    // pricePhone.innerText = priceNumber * parseInt(priceDecreasedValue)
+    const pricePhone = document.getElementById('phone-price');
+    pricePhone.innerText = 1219 * parseInt(priceDecreasedValue);
+})
+
+// case manipulation
+document.getElementById('case-increased').addEventListener('click', function () {
+    const caseValueIncrease = document.getElementById('case-value');
+    let caseValueText = caseValueIncrease.value;
+    caseValueText = parseInt(caseValueText) + 1;
+    caseValueIncrease.value = caseValueText;
+
+    //balance
 })
